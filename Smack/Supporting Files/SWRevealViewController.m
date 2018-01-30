@@ -659,7 +659,7 @@ const int FrontViewPositionNone = 0xff;
     _toggleAnimationDuration = 0.3;
     _toggleAnimationType = SWRevealToggleAnimationTypeSpring;
     _springDampingRatio = 1;
-    _replaceViewAnimationDuration = 0.25;
+    _replaceViewAnimationDuration = 0.4;
     _frontViewShadowRadius = 2.5f;
     _frontViewShadowOffset = CGSizeMake(0.0f, 2.5f);
     _frontViewShadowOpacity = 1.0f;
@@ -1288,7 +1288,7 @@ const int FrontViewPositionNone = 0xff;
     // simetric replacement of position
     xLocation = xLocation * symetry;
     
-    // initially we assume drag to left and default duration
+    // initially we assume drag to left and Def duration
     FrontViewPosition frontViewPosition = FrontViewPositionLeft;
     NSTimeInterval duration = _toggleAnimationDuration;
 
