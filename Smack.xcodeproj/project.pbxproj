@@ -16,6 +16,7 @@
 		52643571202037BA00943D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52643570202037BA00943D2E /* Assets.xcassets */; };
 		52643574202037BA00943D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52643572202037BA00943D2E /* LaunchScreen.storyboard */; };
 		52B7D56D20959E8B00FB6335 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7D56C20959E8B00FB6335 /* AuthService.swift */; };
+		52B7D56F2095AA5D00FB6335 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B7D56E2095AA5D00FB6335 /* RoundedButton.swift */; };
 		52BDDED620217A9200127FA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDDED520217A9200127FA6 /* Constants.swift */; };
 		52BDDED82022F03400127FA6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDDED72022F03400127FA6 /* LoginVC.swift */; };
 		52BDDEDA2022F51000127FA6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDDED92022F51000127FA6 /* CreateAccountVC.swift */; };
@@ -38,6 +39,7 @@
 		52643573202037BA00943D2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52643575202037BA00943D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B7D56C20959E8B00FB6335 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		52B7D56E2095AA5D00FB6335 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		52BDDED520217A9200127FA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		52BDDED72022F03400127FA6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		52BDDED92022F51000127FA6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				5242B8672020807100B40C72 /* GradientView.swift */,
+				52B7D56E2095AA5D00FB6335 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Valentinas Mirosnicenko";
 				TargetAttributes = {
 					52643565202037BA00943D2E = {
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5242B866202079FE00B40C72 /* ChannelVC.swift in Sources */,
+				52B7D56F2095AA5D00FB6335 /* RoundedButton.swift in Sources */,
 				5242B864202079EC00B40C72 /* ChatVC.swift in Sources */,
 				52BDDEDA2022F51000127FA6 /* CreateAccountVC.swift in Sources */,
 				52B7D56D20959E8B00FB6335 /* AuthService.swift in Sources */,
@@ -345,6 +349,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -352,6 +357,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -402,6 +408,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -409,6 +416,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
