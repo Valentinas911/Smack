@@ -10,8 +10,6 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +24,4 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: Segue.toCreateAccount, sender: nil)
     }
     
-    
-
 }
