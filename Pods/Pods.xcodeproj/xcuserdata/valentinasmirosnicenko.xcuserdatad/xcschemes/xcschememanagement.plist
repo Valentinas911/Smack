@@ -24,10 +24,15 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>StarscreamSocketIO.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 	</dict>
 </dict>
