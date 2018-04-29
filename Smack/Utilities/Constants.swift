@@ -21,6 +21,7 @@ struct Segue {
     static let toLogin = "toLogin"
     static let toCreateAccount = "toCreateAccount"
     static let unwindToChannel = "unwindToChannel"
+    static let toAvatarPicker = "toAvatarPicker"
 }
 
 // User Defaults
