@@ -30,5 +30,10 @@ let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
 // Headers
-
 let HEADER = ["Content-Type":"application/json; charset=utf-8"]
+
+// Colors
+let smackPurplePlaceholder = #colorLiteral(red: 0.3254901961, green: 0.4196078431, blue: 0.7764705882, alpha: 0.5015577071)
+
+// Notifications
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")

@@ -118,7 +118,7 @@
                                     <action selector="loginButtonPressed:" destination="reW-PB-d6q" eventType="touchUpInside" id="fKe-wk-h8p"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-KW-Cp4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-KW-Cp4" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="24" y="568" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="0g4-3g-3gZ"/>
@@ -129,7 +129,7 @@
                                 <rect key="frame" x="0.0" y="129" width="375" height="419"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ee2-hT-zcp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" id="Ee2-hT-zcp">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ee2-hT-zcp" id="KpA-mu-v4U">
@@ -417,7 +417,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Yvs-r9-fCs"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="q1t-SY-m0c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="q1t-SY-m0c" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137" y="304" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Qgm-CG-q8L"/>
@@ -475,6 +475,10 @@
                                     <action selector="pickAvatarPressed:" destination="XKc-7j-qfM" eventType="touchUpInside" id="qMV-al-wPh"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-QU-QEo">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.32549019607843138" green="0.41960784313725491" blue="0.77647058823529413" alpha="0.50155770705521474" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -483,6 +487,7 @@
                             <constraint firstItem="zBq-Ma-uqz" firstAttribute="top" secondItem="yrn-85-i0T" secondAttribute="top" constant="16" id="9st-LX-DzL"/>
                             <constraint firstItem="yrn-85-i0T" firstAttribute="bottom" secondItem="e9S-8x-KBj" secondAttribute="bottom" constant="24" id="KLi-hX-LWY"/>
                             <constraint firstItem="kO1-BR-uT7" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="PmR-VY-GQR"/>
+                            <constraint firstItem="8X5-QU-QEo" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="Q0F-6o-odb"/>
                             <constraint firstItem="hv8-WG-Pjy" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="TTi-L3-etR"/>
                             <constraint firstItem="doV-CG-8Nl" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="U12-Gd-hqb"/>
                             <constraint firstItem="hv8-WG-Pjy" firstAttribute="top" secondItem="yrn-85-i0T" secondAttribute="top" constant="60" id="UkO-BJ-a4C"/>
@@ -491,6 +496,7 @@
                             <constraint firstItem="ROA-7c-M7L" firstAttribute="top" secondItem="hv8-WG-Pjy" secondAttribute="bottom" constant="40" id="a0O-Bv-qHx"/>
                             <constraint firstItem="yrn-85-i0T" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="e9S-8x-KBj" secondAttribute="trailing" constant="60" id="dv3-4F-Qrj"/>
                             <constraint firstItem="doV-CG-8Nl" firstAttribute="top" secondItem="q1t-SY-m0c" secondAttribute="top" id="jZ1-vs-Oc9"/>
+                            <constraint firstItem="8X5-QU-QEo" firstAttribute="centerY" secondItem="Nft-xY-Aa6" secondAttribute="centerY" constant="-100" id="oex-mx-7y6"/>
                             <constraint firstItem="e9S-8x-KBj" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="pNv-kL-FX3"/>
                             <constraint firstItem="doV-CG-8Nl" firstAttribute="width" secondItem="q1t-SY-m0c" secondAttribute="width" id="sYh-Cu-KZ3"/>
                             <constraint firstItem="ROA-7c-M7L" firstAttribute="centerX" secondItem="Nft-xY-Aa6" secondAttribute="centerX" id="suC-8c-ASa"/>
@@ -501,6 +507,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="E8o-8c-udr" id="EDp-Mv-PrN"/>
                         <outlet property="passwordTxt" destination="Jab-0T-DNa" id="aqV-MF-e67"/>
+                        <outlet property="spinner" destination="8X5-QU-QEo" id="RyU-st-rOp"/>
                         <outlet property="userImg" destination="q1t-SY-m0c" id="9RU-hV-7hO"/>
                         <outlet property="usernameTxt" destination="FjC-D4-U72" id="8a9-Cz-zAK"/>
                         <segue destination="etC-WR-8AJ" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="MhH-TM-Zkp"/>
@@ -521,9 +528,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uDg-ZZ-m8e">
-                                <rect key="frame" x="112.5" y="28" width="150" height="29"/>
+                                <rect key="frame" x="142" y="28" width="91" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="4gv-tw-OuQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="4gv-tw-OuQ"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Dark"/>
