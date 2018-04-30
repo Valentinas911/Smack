@@ -17,9 +17,6 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        spinner.stopAnimating()
-
-        
     }
 
     @IBAction func closePressed(_ sender: Any) {
@@ -60,7 +57,10 @@ class LoginVC: UIViewController {
     }
     
     func setupView() {
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor:smackPurplePlaceholder])
+        spinner.hidesWhenStopped = true
+        spinner.stopAnimating()
+        
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor:smackPurplePlaceholder])
         passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor:smackPurplePlaceholder])
         spinner.hidesWhenStopped = true
         
