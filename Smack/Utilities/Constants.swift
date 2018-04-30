@@ -43,3 +43,5 @@ let smackPurplePlaceholder = #colorLiteral(red: 0.3254901961, green: 0.419607843
 
 // Notifications
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
