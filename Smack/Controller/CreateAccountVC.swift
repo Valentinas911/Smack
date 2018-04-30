@@ -28,6 +28,16 @@ class CreateAccountVC: UIViewController {
         emailTxt.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+        
+    }
+    
     
     @IBAction func closePressed(_ sender: Any) {
         performSegue(withIdentifier: Segue.unwindToChannel, sender: nil)
