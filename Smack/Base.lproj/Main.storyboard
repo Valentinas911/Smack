@@ -81,6 +81,9 @@
                                 <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageBoxEditing:" destination="V39-8e-Tyi" eventType="editingChanged" id="s7f-rf-4ty"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg4-Y6-wcR">
                                 <rect key="frame" x="337" y="632" width="30" height="30"/>
@@ -93,7 +96,7 @@
                                     <action selector="sendButtonPressed:" destination="V39-8e-Tyi" eventType="touchUpInside" id="4hC-4h-jJw"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EVa-Ic-8Lu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EVa-Ic-8Lu">
                                 <rect key="frame" x="0.0" y="77" width="375" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -175,6 +178,7 @@
                         <outlet property="channelNameLabel" destination="Gua-4v-a4l" id="Usr-db-6g7"/>
                         <outlet property="menuButton" destination="5gL-gq-R9f" id="ucB-mo-1G2"/>
                         <outlet property="messageTxtBox" destination="HPO-DV-Mvj" id="2Qr-p1-uUm"/>
+                        <outlet property="sendButton" destination="qg4-Y6-wcR" id="bqG-Ym-8jD"/>
                         <outlet property="tableView" destination="EVa-Ic-8Lu" id="jYN-3h-ks1"/>
                     </connections>
                 </viewController>

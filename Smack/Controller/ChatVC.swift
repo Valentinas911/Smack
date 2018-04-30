@@ -14,14 +14,19 @@ class ChatVC: UIViewController {
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    var isTyping: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
+        sendButton.isHidden = true
         
         view.bindToKeyboard()
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
@@ -35,6 +40,13 @@ class ChatVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.selectChannel), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+                self.tableView.reloadData()
+                self.scrollToLastMessage()
+            }
+        }
+        
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail { (success) in
                 if success {
@@ -42,10 +54,19 @@ class ChatVC: UIViewController {
                 }
             }
         }
-        
-        
-        
+
     }
+    
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if messageTxtBox.text == "" {
+            isTyping = false
+            sendButton.isHidden = true
+        } else {
+            isTyping = true
+            sendButton.isHidden = false
+        }
+    }
+    
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         
@@ -58,18 +79,20 @@ class ChatVC: UIViewController {
                     self.messageTxtBox.resignFirstResponder()
                 }
             }
-            
-            
-            
-            
+  
         }
-        
-        
         view.endEditing(true)
     }
     
     @objc func selectChannel(_ notif: Notification) {
         updateWithChannel()
+    }
+    
+    func scrollToLastMessage() {
+        if MessageService.instance.messages.count > 0 {
+            let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+            self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+        }
     }
     
     func updateWithChannel() {
@@ -88,6 +111,7 @@ class ChatVC: UIViewController {
             onLoginGetMessages()
         } else {
             channelNameLabel.text = "Please Log In"
+            tableView.reloadData()
         }
     }
 
@@ -109,6 +133,7 @@ class ChatVC: UIViewController {
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
             if success {
                 self.tableView.reloadData()
+                self.scrollToLastMessage()
             }
         }
     }
