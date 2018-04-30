@@ -33,6 +33,17 @@ class ChannelVC: UIViewController {
         super.viewDidAppear(true)
         setupUserInfo()
     }
+    
+    @IBAction func addChannelButtonPressed(_ sender: Any) {
+        
+        if AuthService.instance.isLoggedIn {
+            let channel = AddChannelVC()
+            channel.modalPresentationStyle = .custom
+            present(channel, animated: true, completion: nil)
+        }
+        
+    }
+    
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         

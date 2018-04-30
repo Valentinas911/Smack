@@ -38,7 +38,7 @@ class ProfileVC: UIViewController {
         emailTxt.text = UserDataService.instance.email
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileVC.dismissVC(_:)))
-        self.view.addGestureRecognizer(tap)
+        bgView.addGestureRecognizer(tap)
         
     }
     

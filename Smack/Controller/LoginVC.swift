@@ -64,7 +64,7 @@ class LoginVC: UIViewController {
         passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor:smackPurplePlaceholder])
         spinner.hidesWhenStopped = true
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginVC.handleTap))
         self.view.addGestureRecognizer(tap)
     }
     
