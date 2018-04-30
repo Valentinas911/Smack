@@ -41,7 +41,6 @@ class LoginVC: UIViewController {
                     if success {
                         debugPrint("User information Fetched")
                         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-                        
                         self.dismiss(animated: true, completion: nil)
                     } else {
                         self.spinner.stopAnimating()

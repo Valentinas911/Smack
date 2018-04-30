@@ -27,7 +27,11 @@ class AuthService {
     
     var authToken: String {
         get {
-            return defaults.string(forKey: TOKEN_KEY)!
+            if defaults.string(forKey: TOKEN_KEY) != nil {
+                return defaults.string(forKey: TOKEN_KEY)!
+            } else {
+                return ""
+            }
         } set {
             defaults.set(newValue, forKey: TOKEN_KEY)
         }
@@ -134,8 +138,8 @@ class AuthService {
             
             if response.result.error == nil {
                 
-                guard let data = response.data, let json = try? JSON(data:data) else { return }
-                self.setUserInfo(json: json)
+                guard let data = response.data else { return }
+                self.setUserInfo(data: data)
                 completion(true)
             } else {
                 completion(false)
@@ -151,8 +155,8 @@ class AuthService {
         Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 
-                guard let data = response.data, let json = try? JSON(data:data) else { return }
-                self.setUserInfo(json: json)
+                guard let data = response.data else { return }
+                self.setUserInfo(data: data)
                 
                 completion(true)
             } else {
@@ -163,7 +167,9 @@ class AuthService {
         
     }
     
-    fileprivate func setUserInfo(json: JSON) {
+    fileprivate func setUserInfo(data: Data) {
+        
+        guard let json = try? JSON(data:data) else { return }
         
         let id = json["_id"].stringValue
         let avatarColor = json["avatarColor"].stringValue
